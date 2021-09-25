@@ -9,7 +9,7 @@ const Member = (props) => {
                 <img className='member-img' src={img} alt="" />
             </div>
             <div>
-                <h4>{name}</h4>
+                <h4 style={{ color: 'tomato' }}>{name}</h4>
                 <p>Designation: {designation}</p>
                 <h6>Email: {email}</h6>
                 <h5>Batch(BCS): {batch_BCS}</h5>
