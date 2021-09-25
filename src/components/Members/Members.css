@@ -1,0 +1,10 @@
+.members-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.members-cart {
+    display: grid;
+    grid-template-columns: repeat( 4, 1fr);
+    grid-gap: 20px;
+}

@@ -1,0 +1,36 @@
+.count-container {
+    border: 1px solid hotpink;
+    background-color: rgba(44, 142, 255, 0.562);
+}
+
+.members-count {
+    text-align: center;
+}
+
+.total-cost {
+    border-top: 1px solid rgb(255, 220, 238);
+}
+
+.member-add-card {
+    border: 1px solid sienna;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 55, 128, 0.452);
+}
+
+li {
+    border: 1px solid rgb(255, 17, 0);
+    border-collapse: collapse;
+    list-style: none;
+    color: rgb(0, 108, 122);
+    margin: 4px 0;
+    transition: .5s;
+    background-color: rgb(197, 255, 182);
+}
+
+li:hover {
+    background-color: rgb(255, 255, 255);
+    transition: .5s;
+}
