@@ -6,14 +6,14 @@ const MemberAddToCart = (props) => {
     const totalReducer = (previous, member) => previous + member.salary;
     const total = cart.reduce(totalReducer, 0);
 
-
+    // display cart to name
     let totalName = [];
     for (const name of cart) {
         totalName.push(name.name)
 
     }
 
-
+    // add to cart
     return (
         <div className='member-add-card'>
             <div className='count-container'>
