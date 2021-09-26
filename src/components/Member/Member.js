@@ -4,6 +4,18 @@ import './Member.css'
 
 const Member = (props) => {
     const [disabled, setDisabled] = useState(false);
+
+    // selected condition
+    const add = "Add to Member";
+    const added = "Already Added";
+    const selected = () => {
+        if (disabled === false) {
+            return add;
+        } else {
+            return added;
+        }
+    }
+
     /* destructuring */
     const { img, name, designation, email, batch_BCS, salary } = props.member;
 
@@ -24,7 +36,7 @@ const Member = (props) => {
                 <button disabled={disabled} className="handleAddToCart" onClick={() => {
                     props.handleAddToCart(props.member);
                     setDisabled(true);
-                }}><i class="fas fa-user-plus"></i> Add to Member</button>
+                }}><i class="fas fa-user-plus"></i> {selected()}</button>
                 <div>
                     {/* Cart icon */}
                     <i class="fab fa-facebook-square cart-icon"></i>

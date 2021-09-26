@@ -12,7 +12,6 @@ const Members = () => {
 
 
 
-
     // JSON data convert
     useEffect(() => {
         fetch('./FakeData.JSON')
