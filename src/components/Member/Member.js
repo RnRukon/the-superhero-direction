@@ -6,7 +6,7 @@ const Member = (props) => {
     const [disabled, setDisabled] = useState(false);
 
     // selected condition
-    const add = "Add to Member";
+    const add = " Add to Member";
     const added = "Already Added";
     const selected = () => {
         if (disabled === false) {
