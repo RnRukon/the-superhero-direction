@@ -1,10 +1,35 @@
 .members-container {
     display: grid;
     grid-template-columns: 4fr 1fr;
+    padding: 0 50px;
 }
 
 .members-cart {
     display: grid;
     grid-template-columns: repeat( 4, 1fr);
     grid-gap: 20px;
+}
+
+/* mobile mood */
+
+@media only screen and (max-width: 600px) {
+    .members-container {
+        grid-template-columns: 1fr;
+    }
+    .member-add-card {
+        margin: 0;
+    }
+    .members-cart {
+        grid-template-columns: 1fr;
+    }
+    .App {
+        padding: 0px;
+    }
+    .member-cart {
+        height: auto;
+    }
+    .header-container {
+        height: auto;
+        padding-bottom: 20px;
+    }
 }
