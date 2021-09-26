@@ -8,6 +8,11 @@ const Members = () => {
     const [members, setMembers] = useState([]);
     const [cart, setCart] = useState([]);
 
+
+
+
+
+
     // JSON data convert
     useEffect(() => {
         fetch('./FakeData.JSON')
@@ -20,7 +25,6 @@ const Members = () => {
     const handleAddToCart = (member) => {
         const newCart = [...cart, member];
         setCart(newCart);
-
     };
     return (
         <div className='members-container'>

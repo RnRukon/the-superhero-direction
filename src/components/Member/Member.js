@@ -1,9 +1,12 @@
-import React from 'react';
+
+import { useState } from 'react';
 import './Member.css'
 
 const Member = (props) => {
+    const [disabled, setDisabled] = useState(false);
     /* destructuring */
     const { img, name, designation, email, batch_BCS, salary } = props.member;
+
     return (
 
         /* members cart */
@@ -18,7 +21,10 @@ const Member = (props) => {
                 <h6>Email: {email}</h6>
                 <h5>Batch(BCS): {batch_BCS}</h5>
                 <h3>Salary: ৳{salary}</h3>
-                <button className="handleAddToCart" onClick={() => props.handleAddToCart(props.member)}><i class="fas fa-user-plus"></i> Add to Member</button>
+                <button disabled={disabled} className="handleAddToCart" onClick={() => {
+                    props.handleAddToCart(props.member);
+                    setDisabled(true);
+                }}><i class="fas fa-user-plus"></i> Add to Member</button>
                 <div>
                     {/* Cart icon */}
                     <i class="fab fa-facebook-square cart-icon"></i>

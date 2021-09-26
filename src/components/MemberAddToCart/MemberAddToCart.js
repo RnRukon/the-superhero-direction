@@ -18,7 +18,7 @@ const MemberAddToCart = (props) => {
         <div className='member-add-card'>
             <div className='count-container'>
                 <h4 className="members-count"><i class="fas fa-user-tie"></i> Member Added: {cart.length}</h4>
-                <h5 className='total-cost'>Total Cost: {total}</h5>
+                <h5 className='total-cost'>Total Cost: ${total}</h5>
             </div>
             <ol>
                 {
