@@ -19,12 +19,13 @@ const DisplayName = (props) => {
                         padding: "0px 5px"
                     }} src={img} alt="" />
                 <span >
-                    {name} <br />
+                    {name}
 
                 </span>
-
+                <img onClick={() => removeItem(key)} src="https://img.icons8.com/color/48/000000/cancel--v3.png" alt="" />
             </li>
-            <button style={{ margin: '0px', backgroundColor: 'tomato', borderStyle: 'none', padding: '2px 10px', borderRadius: '5px' }} onClick={() => removeItem(key)}>Remove</button>
+
+
         </div>
     );
 };
