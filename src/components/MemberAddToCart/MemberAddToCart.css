@@ -1,6 +1,6 @@
 .count-container {
     border: 1px solid hotpink;
-    background-color: rgba(95, 146, 255, 0.562);
+    /* background-color: rgba(95, 146, 255, 0.562); */
     color: tomato;
 }
 
@@ -13,12 +13,12 @@
 }
 
 .member-add-card {
-    border: 1px solid sienna;
+    /* border: 1px solid sienna; */
     margin-top: 50px;
     margin-left: 50px;
     padding: 20px;
     text-align: center;
-    background-color: rgba(0, 55, 128, 0.452);
+    /* background-color: rgba(0, 55, 128, 0.452); */
 }
 
 li {
@@ -28,7 +28,8 @@ li {
     color: rgb(194, 248, 255);
     margin: 4px 0;
     transition: .5s;
-    background-color: rgb(0, 99, 165);
+    /* background-color: rgb(0, 99, 165); */
+    border-radius: 10px;
 }
 
 li:hover {

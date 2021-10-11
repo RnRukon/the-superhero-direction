@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div className='header-container'>
             <div>
-                <h1 className="header-title">Sylhet District Managing Committee </h1>
+                <h1 className="header-title">District Managing Committee </h1>
                 <p style={{ color: 'yellow' }}>Bangladesh National Portal</p>
                 <h3 style={{ color: 'tomato' }}>Per Month Total Budget: $150 Million</h3>
             </div>

@@ -19,6 +19,7 @@ const Member = (props) => {
     /* destructuring */
     const { img, name, designation, email, batch_BCS, salary } = props.member;
 
+
     return (
 
         /* members cart */
@@ -36,12 +37,13 @@ const Member = (props) => {
                 <button disabled={disabled} className="handleAddToCart" onClick={() => {
                     props.handleAddToCart(props.member);
                     setDisabled(true);
-                }}><i class="fas fa-user-plus"></i> {selected()}</button>
+
+                }}><i className="fas fa-user-plus"></i> {selected()}</button>
                 <div>
                     {/* Cart icon */}
-                    <i class="fab fa-facebook-square cart-icon"></i>
-                    <i class="fab fa-twitter-square cart-icon"></i>
-                    <i class="fab fa-linkedin cart-icon"></i>
+                    <i className="fab fa-facebook-square cart-icon"></i>
+                    <i className="fab fa-twitter-square cart-icon"></i>
+                    <i className="fab fa-linkedin cart-icon"></i>
                 </div>
             </div>
         </div>

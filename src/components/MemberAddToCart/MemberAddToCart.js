@@ -1,41 +1,37 @@
 import React from 'react';
+import { removeFromDb } from '../../utilities/fakedb';
+import DisplayName from './DisplayName';
 import './MemberAddToCart.css'
 
 const MemberAddToCart = (props) => {
-    const { cart } = props;
+    const { cart, setCart } = props;
     const totalReducer = (previous, member) => previous + member.salary;
     const total = cart.reduce(totalReducer, 0);
 
-    // display cart to name
-    let totalName = [];
-    for (const name of cart) {
-        totalName.push(name.name)
-
+    const removeItem = (key) => {
+        removeFromDb(key)
+        // remove items
+        const newCart = cart.filter(item => item.key !== key)
+        setCart(newCart)
     }
 
     // add to cart
     return (
         <div className='member-add-card'>
             <div className='count-container'>
-                <h4 className="members-count"><i class="fas fa-user-tie"></i> Member Added: {cart.length}</h4>
+                <h4 className="members-count"><i className="fas fa-user-tie"></i> Member Added: {cart.length}</h4>
                 <h5 className='total-cost'>Total Cost: ${total}</h5>
             </div>
+
             <ol>
                 {
-                    totalName.map(name => <DisplayName name={name}></DisplayName>)
-
+                    cart.map(item => <DisplayName item={item} removeItem={removeItem} key={item.key}></DisplayName>)
                 }
             </ol>
+
         </div>
     );
 };
 
-const DisplayName = (props) => {
-    return (
-        <div>
-            <li>{props.name}</li>
-        </div>
-    )
-}
 
 export default MemberAddToCart;
